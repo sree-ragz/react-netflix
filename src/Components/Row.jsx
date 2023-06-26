@@ -35,11 +35,13 @@ export default function Row(props) {
   };
   return (
     <>
-      <Banner
-        bannerTitle={bannerTitle}
-        bannerSrc={bannerSrc}
-        bannerDes={bannerDes}
-      />
+      {props.isSmall || (
+        <Banner
+          bannerTitle={bannerTitle}
+          bannerSrc={bannerSrc}
+          bannerDes={bannerDes}
+        />
+      )}
       <div className="row">
         <h2>{props.title}</h2>
         <div className="posters">
